@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forgotten Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #d4d4d4;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8b0000;
+            text-shadow: 2px 2px 8px rgba(139, 0, 0, 0.5);
+            letter-spacing: 3px;
+            animation: flicker 3s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+
+        .story {
+            text-indent: 2em;
+            margin-bottom: 1.5em;
+            font-size: 1.1em;
+            text-align: justify;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .story:first-letter {
+            font-size: 3em;
+            line-height: 1;
+            float: left;
+            margin-right: 10px;
+            color: #8b0000;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 40px 0;
+            color: #8b0000;
+            font-size: 2em;
+        }
+
+        .warning {
+            border: 2px solid #8b0000;
+            padding: 20px;
+            margin: 40px 0;
+            background: rgba(139, 0, 0, 0.1);
+            text-align: center;
+            font-style: italic;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(139, 0, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(139, 0, 0, 0.8); }
+        }
+
+        .shadow {
+            position: fixed;
+            top: 0;
+            right: -100px;
+            width: 300px;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 70%);
+            pointer-events: none;
+            animation: shadowMove 10s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes shadowMove {
+            0%, 100% { right: -100px; }
+            50% { right: calc(100% + 100px); }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 20px;
+            color: #444;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .story {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow"></div>
+
+    <div class="container">
+        <h1>THE FORGOTTEN GALLERY</h1>
+        <p class="subtitle">A Tale of What Watches from the Walls</p>
+
+        <div class="warning">
+            ⚠ Some artworks should never have been painted ⚠
+        </div>
+
+        <p class="story">
+            The invitation arrived on a Tuesday, slipped under Marcus Chen's apartment door like a secret. Thick black cardstock, embossed with silver letters that seemed to shift in the light: "You are cordially invited to the private viewing of the Ashmore Collection. Midnight, October 31st. 1847 Blackwood Lane." No RSVP. No phone number. Just an address Marcus didn't recognize in a part of the city he'd never visited.
+        </p>
+
+        <p class="story">
+            As an art critic for the Tribune, Marcus received dozens of gallery invitations each month. But this one felt different. The paper was cold to the touch, and when he held it up to the light, he could see watermarks—faces, he thought, though they vanished when he tried to focus on them.
+        </p>
+
+        <p class="story">
+            He should have thrown it away.
+        </p>
+
+        <div class="divider">⚰</div>
+
+        <p class="story">
+            Blackwood Lane existed in that forgotten part of the city where streetlights flickered and died, where even GPS seemed uncertain. The gallery itself was a converted Victorian mansion, its windows dark except for a single light above the entrance. Marcus checked his phone: 11:58 PM. He was the only one there.
+        </p>
+
+        <p class="story">
+            The door opened before he could knock.
+        </p>
+
+        <p class="story">
+            "Mr. Chen. We've been expecting you." The woman who greeted him wore a black dress that seemed to absorb light. Her face was pale, beautiful in a way that made Marcus uncomfortable, like a porcelain doll brought to life. "I am Vera Ashmore, curator of this collection. Please, come in. The others are already inside."
+        </p>
+
+        <p class="story">
+            Others? The street had been empty. But as Marcus stepped into the foyer, he heard voices—murmured conversations echoing from deeper within the gallery. The interior was dimly lit by candles, casting dancing shadows across walls lined with paintings. Even in the poor light, Marcus could tell these were masterworks. Renaissance portraits, Baroque landscapes, contemporary abstracts—a collection worth millions.
+        </p>
+
+        <p class="story">
+            "The Ashmore Collection has never been shown publicly," Vera explained as she led him through a corridor. "These paintings were acquired by my ancestor, Silas Ashmore, in the 1840s. He was... particular about his art. He believed that some paintings capture more than just images. They capture essence. Souls, if you will."
+        </p>
+
+        <p class="story">
+            Marcus forced a polite laugh. "That's quite the artistic philosophy."
+        </p>
+
+        <p class="story">
+            Vera's smile didn't reach her eyes. "Isn't it?"
+        </p>
+
+        <div class="divider">⚰</div>
+
+        <p class="story">
+            The main gallery was a vast room with vaulted ceilings. About twenty people milled about, champagne glasses in hand, examining the paintings. But something was wrong. The guests moved too slowly, too deliberately, like figures in a dream. And when Marcus tried to make eye contact with a man in a gray suit, the man's gaze slid past him, unfocused and empty.
+        </p>
+
+        <p class="story">
+            "Please, enjoy the collection," Vera said. "Take your time. Really look at the paintings. They reward close observation." She glided away, leaving Marcus alone.
+        </p>
+
+        <p class="story">
+            He approached the nearest painting—a portrait of a young woman in a white dress, standing in a garden. The technique was flawless, almost photographic. But as Marcus leaned closer, he noticed something odd. The woman's eyes seemed to follow him. Not in the usual way that portrait eyes appear to track the viewer, but actually moving, the pupils shifting as he moved side to side.
+        </p>
+
+        <p class="story">
+            Impossible. Just a trick of the light.
+        </p>
+
+        <p class="story">
+            He moved to the next painting—a landscape of a dark forest. As he studied it, he realized the trees were arranged like fingers reaching upward, grasping. And there, barely visible in the shadows between the trunks, were faces. Dozens of them, mouths open in silent screams.
+        </p>
+
+        <p class="story">
+            Marcus's heart began to race. He turned to leave, but the other guests had surrounded him, forming a circle. Their faces were blank, skin waxy in the candlelight. They stared at him with those same unfocused eyes.
+        </p>
+
+        <p class="story">
+            "What is this?" Marcus demanded, his voice cracking.
+        </p>
+
+        <p class="story">
+            Vera appeared beside him, her cold hand on his shoulder. "The collection needed a new acquisition, Mr. Chen. A critic's perspective, shall we say. Your essence will make a wonderful addition."
+        </p>
+
+        <p class="story">
+            The guests closed in. Marcus tried to run, but his legs wouldn't move. He looked down and gasped—his feet had begun to fade, becoming translucent. The sensation crept upward, his legs dissolving into streams of color that flowed toward a blank canvas on the far wall.
+        </p>
+
+        <p class="story">
+            "Don't fight it," Vera whispered. "Silas learned the secret, you see. How to trap consciousness in paint and canvas. These guests have been here for decades, centuries some of them. And now they have enough collective will to draw in new additions. You'll join them. You'll become art. Eternal. Immortal. Trapped."
+        </p>
+
+        <p class="story">
+            Marcus tried to scream, but his voice had already been absorbed. He felt his thoughts slowing, compressing, being translated into brushstrokes and pigments. The world narrowed to a frame, his vision flattening into two dimensions. He could see the gallery from his new perspective on the wall—see Vera smiling, see the blank-eyed guests returning to their wandering, see his own body dissolving into the final wisps of color.
+        </p>
+
+        <div class="divider">⚰</div>
+
+        <p class="story">
+            The portrait of Marcus Chen was exquisite. Art critics who later visited the Ashmore Gallery (those few who received invitations) marveled at the realism, the way the subject's eyes seemed to plead, the way his mouth appeared frozen mid-scream. Such emotional depth, they said. Such mastery of the medium.
+        </p>
+
+        <p class="story">
+            And if they looked very closely, if they leaned in until their breath fogged the canvas, they might notice something. Behind Marcus's painted eyes, there was movement. Consciousness. A man trapped in pigment and linseed oil, watching helplessly as new guests arrived, knowing he would watch them join the collection, one by one, forever.
+        </p>
+
+        <p class="story">
+            The invitations kept going out, sliding under doors throughout the city. Black cardstock with silver letters that shifted in the light. The Ashmore Collection was always accepting new pieces.
+        </p>
+
+        <div class="warning">
+            If you receive an invitation, throw it away.<br>
+            Some galleries should remain forgotten.
+        </div>
+
+        <footer>
+            <p>The Forgotten Gallery • A Horror Story</p>
+            <p>© 2024 • All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add subtle horror effects
+        document.addEventListener('mousemove', (e) => {
+            const shadow = document.querySelector('.shadow');
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            shadow.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(139,0,0,0.3) 0%, transparent 50%)`;
+        });
+
+        // Random flickering effect
+        setInterval(() => {
+            if (Math.random() > 0.95) {
+                document.body.style.opacity = '0.9';
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 50);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
